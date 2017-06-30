@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/md_blue_400"
+    android:elevation="5dp">
+
+    <TextView
+        android:id="@+id/tv_find_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+    <ImageButton
+        android:id="@+id/ib_find_ask"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginLeft="8dp"
+        android:background="@null"
+        android:scaleType="centerCrop" />
+
+    <ImageButton
+        android:id="@+id/ib_find_refresh"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="8dp"
+        android:background="@null"
+        android:scaleType="centerCrop" />
+
+</android.support.v7.widget.Toolbar>
