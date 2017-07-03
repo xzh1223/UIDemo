@@ -1,8 +1,10 @@
 package com.example.zhenghangxia.uidemo.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -10,6 +12,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.zhenghangxia.uidemo.R;
+import com.example.zhenghangxia.uidemo.activity.PostDetailsActivity;
 import com.example.zhenghangxia.uidemo.base.BaseFragment;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
@@ -89,6 +92,7 @@ public class RecentFragment extends BaseFragment {
     @Override
     protected void initData() {
         mRefresh.setRefreshing(true);
+        // 模拟加载网络数据
         mRefresh.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -107,19 +111,19 @@ public class RecentFragment extends BaseFragment {
         List<String> mList = new ArrayList<>();
         mList.add("\n1\n\nthis is 1\n");
         mList.add("\n2\n\n" +
-                "this is 1\n");
+                "this is 2\n");
         mList.add("\n3\n\n" +
-                "this is 1\n");
+                "this is 3\n");
         mList.add("\n4\n\n" +
-                "this is 1\n");
+                "this is 4\n");
         mList.add("\n5\n\n" +
-                "this is 1\n");
+                "this is 5\n");
         mList.add("\n6\n\n" +
-                "this is 1\n");
+                "this is 6\n");
         mList.add("\n7\n\n" +
-                "this is 1\n");
+                "this is 7\n");
         mList.add("\n8\n\n" +
-                "this is 1\n");
+                "this is 8\n");
         mListView.setAdapter(new ArrayAdapter<>(getActivity(),
                 android.R.layout.simple_list_item_1,mList));
 
@@ -127,6 +131,15 @@ public class RecentFragment extends BaseFragment {
 
     @Override
     protected void initEvents() {
-
+        // ListView数据列表点击事件
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getActivity(), PostDetailsActivity.class);
+                TextView tv = (TextView) view.findViewById(android.R.id.text1);
+                intent.putExtra("content",tv.getText());
+                startActivity(intent);
+            }
+        });
     }
 }

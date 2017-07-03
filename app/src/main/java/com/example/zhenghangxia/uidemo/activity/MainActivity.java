@@ -29,8 +29,6 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
     private FindFragment mFindFragment;
     private MineFragment mMineFragment;
 
-//    private FrameLayout mFrameLayout;
-
     @Override
     protected int getViewLayout() {
         return R.layout.activity_main;
@@ -39,7 +37,6 @@ public class MainActivity extends BaseActivity implements BottomNavigationBar.On
     @Override
     protected void initView() {
 
-//        mFrameLayout = (FrameLayout) findViewById(R.id.frame_content);
         mBottomNavigationBar = (BottomNavigationBar) findViewById(R.id.bnb_main);
         mBottomNavigationBar.setMode(BottomNavigationBar.MODE_FIXED);
         mBottomNavigationBar.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_STATIC);

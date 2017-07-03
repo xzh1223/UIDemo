@@ -11,4 +11,16 @@
         <item name="colorPrimaryDark">@color/md_blue_500</item>
     </style>
 
+    <style name="ToolbarTheme" parent="Theme.AppCompat.Light">
+        <item name="actionMenuTextColor">@color/md_white_1000</item>
+        <item name="colorButtonNormal">@color/md_white_1000</item>
+        <item name="colorControlNormal">@color/md_white_1000</item>
+    </style>
+
+    <style name="MenuButtonsSmall">
+        <item name="fab_colorNormal">@color/md_blue_400</item>
+        <item name="fab_colorPressed">@color/md_blue_500</item>
+        <item name="fab_colorRipple">@color/md_blue_300</item>
+    </style>
+
 </resources>

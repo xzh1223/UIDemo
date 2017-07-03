@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/md_blue_400" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@null"
+        android:elevation="3dp">
+
+        <ImageView
+            android:id="@+id/iv_me_header"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_me_slogan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_me_header"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="this is a text"
+            android:textColor="@color/md_white_1000"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <!--第一个卡片-->
+    <include layout="@layout/include_me_card1" />
+
+    <!--第二个卡片-->
+    <include layout="@layout/include_me_card2" />
+
+    <!--第三个卡片-->
+    <include layout="@layout/include_me_card3" />
+
+</RelativeLayout>
